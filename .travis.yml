@@ -1,0 +1,15 @@
+language: julia
+os:
+  - linux
+#  - osx
+julia:
+  - 0.6
+# - nightly
+notifications:
+  email: false
+script:
+  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+  - julia --depwarn=no -e 'Pkg.add(LightGraphs")'
+  - julia -e 'Pkg.clone("https://github.com/QuantumWalks/QuWalkEC.jl.git"); Pkg.build("QuWalkEC"); Pkg.test("QuWalkEC"; coverage=true)'
+after_success:
+- julia --depwarn=no -e 'cd(Pkg.dir("QuWalkEC")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(process_folder())'
