@@ -15,11 +15,11 @@ Currently package is under construction.
 
 ## Installation
 
-QSWalk requires [Expokit package for Julia](https://github.com/acroy/Expokit.jl), implementing some routines contained in [EXPOKIT](http://www.maths.uq.edu.au/expokit). This package will be installed automatically with `QSWalk` installation
+QSWalk requires [LightGraphs package for Julia](https://github.com/JuliaGraphs/LightGraphs.jl). This package will be installed automatically with QuWalkEC installation.
 
-QSWalk can be installed directly form GitHub repository.
+QuWalkEC can be installed directly form GitHub repository.
 
 ```julia
-Pkg.clone("git@github.com:QuantumWalks/QuWalkEC.jl.git")
+Pkg.clone("https://github.com/QuantumWalks/QuWalkEC.jl.git")
 ```
 
