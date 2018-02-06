@@ -11,7 +11,7 @@ script:
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
   - julia --depwarn=no -e 'Pkg.add("LightGraphs")'
   - julia --depwarn=no -e 'Pkg.add("IterTools")'
-  - julia -e 'Pkg.clone("git@github.com:QuantumWalks/QuWalkEC.jl.git")'
+  - julia -e 'Pkg.clone("https://github.com/QuantumWalks/QuWalkEC.jl.git")'
   - julia -e 'Pkg.build("QuWalkEC")'
   - julia -e 'Pkg.test("QuWalkEC"; coverage=true)'
 after_success:
