@@ -13,16 +13,16 @@ using Base.Test
     @test have_ss_connected(smallgraph(:bull), [1,2,3])
     @test !have_ss_connected(smallgraph(:bull), [1,2])
 
-    @test_throws ErrorException have_ss_connected(CompleteGraph(10), [2, 2])
-    @test_throws ErrorException have_ss_connected(CompleteGraph(10), [2, 2, 3])
+    @test_throws ArgumentError have_ss_connected(CompleteGraph(10), [2, 2])
+    @test_throws ArgumentError have_ss_connected(CompleteGraph(10), [2, 2, 3])
   end
 
   @testset "generalt subgraph" begin
     @test have_ss(PathGraph(10), [2, 3, 5, 6])
     @test !have_ss(PathGraph(10), [1, 2, 6, 7])
 
-    @test_throws ErrorException have_ss(PathGraph(10), [2, 2, 6, 7])
-    @test_throws ErrorException have_ss(PathGraph(10), [2, 2, 3])
+    @test_throws ArgumentError have_ss(PathGraph(10), [2, 2, 6, 7])
+    @test_throws ArgumentError have_ss(PathGraph(10), [2, 2, 3])
   end
 
 end
