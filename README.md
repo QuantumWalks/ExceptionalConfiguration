@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/QuantumWalks/QuWalkEC.jl.svg?branch=master)](https://travis-ci.org/QuantumWalks/QuWalkEC.jl)
 [![Coverage Status](https://coveralls.io/repos/github/QuantumWalks/QuWalkEC.jl/badge.svg?branch=master)](https://coveralls.io/github/QuantumWalks/QuWalkEC.jl?branch=master)
 
+**CAUTION!** The developement of the package is suspended. Due to serious error found in the package we recommend not to use it anymore.
+
 # QuWalkEC.jl
 
 ## Package description
